@@ -1,5 +1,6 @@
-# Mac "._" files
+# Mac finder files
 ._*
+.DS_Store
 
 # ## Core latex/pdflatex auxiliary files:
 *.aux
