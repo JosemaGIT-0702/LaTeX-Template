@@ -15,7 +15,7 @@ jobs:
     steps:
       - name: Send message to Matrix
         run: |
-          BODY="GitHub event in $GITHUB_REPOSITORY: $GITHUB_EVENT_NAME by $GITHUB_ACTOR"
+          BODY="$GITHUB_ACTOR has updated $GITHUB_REPOSITORY"
           curl -XPOST \
             "$MATRIX_HOMESERVER/_matrix/client/v3/rooms/$MATRIX_ROOM/send/m.room.message?access_token=$MATRIX_TOKEN" \
             -H "Content-Type: application/json" \
