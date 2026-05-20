@@ -1,6 +1,16 @@
-\documentclass{scrbook}
-\usepackage{config}
+\documentclass[fontsize=12pt]{scrartcl}
+
+\usepackage{etc/config}
+\usepackage{jheppub}
 
 \begin{document}
-    Hello World
+Hello World, this is an equation:
+\begin{equation}
+	S = \int \text{d}^nx ~ \mathcal{L}\left(x,\dot{x}\right)
+\end{equation}
+
+This is a new paragraph. \cite{Begines:2026mlv}
+
+\bibliography{Refs}
+
 \end{document}

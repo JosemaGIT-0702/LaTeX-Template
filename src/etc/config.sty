@@ -1,0 +1,35 @@
+%% Preamble
+
+\makeatletter
+	\def\input@path{{etc/}}
+\makeatother
+
+%% Language
+
+\usepackage{polyglossia}
+\setmainlanguage{english}
+\usepackage{csquotes}
+
+%% Font
+
+\usepackage{fontspec}
+
+\setmainfont{Times New Roman}
+\setsansfont{Arial}
+\setmonofont{Fira Code}
+
+%% Layout
+\KOMAoption{DIV}{13}
+
+%% Figures and Graphics
+
+\usepackage{graphicx}
+\graphicspath{{etc/Images/}}
+
+%% Bibliography
+
+\bibliographystyle{etc/JHEP}
+
+%% Mathematical Symbols
+
+\usepackage{amssymb, amsthm, mathtools}
