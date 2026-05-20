@@ -10,21 +10,21 @@ jobs:
       - name: Compile LaTeX document
         uses: xu-cheng/texlive-action/full@v1
         with:
-        run: |
-          apt-get update
-          apt-get install -y fontconfig wget unzip
+          run: |
+            apt-get update
+            apt-get install -y fontconfig wget unzip
 
-          mkdir -p ~/.local/share/fonts
-          cd /tmp
+            mkdir -p ~/.local/share/fonts
+            cd /tmp
 
-          wget https://github.com/tonsky/FiraCode/releases/download/6.2/Fira_Code_v6.2.zip
-          unzip Fira_Code_v6.2.zip -d FiraCode
-          cp FiraCode/ttf/*.ttf ~/.local/share/fonts/
+            wget https://github.com/tonsky/FiraCode/releases/download/6.2/Fira_Code_v6.2.zip
+            unzip Fira_Code_v6.2.zip -d FiraCode
+            cp FiraCode/ttf/*.ttf ~/.local/share/fonts/
 
-          fc-cache -f -v
+            fc-cache -f -v
 
-          cd src
-          latexmk -xelatex
+            cd src
+            latexmk -xelatex
 
       - name: Upload document
         uses: actions/upload-artifact@v4
