@@ -24,7 +24,7 @@ jobs:
         with:
           run: |
             cd src
-            latexmk
+            latexmk -xelatex
             
       - name: Upload document
         uses: actions/upload-artifact@v4
