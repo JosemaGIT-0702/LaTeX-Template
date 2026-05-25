@@ -1,16 +1,38 @@
-\documentclass[fontsize=12pt]{scrartcl}
+\documentclass{beamer}
 
 \usepackage{etc/config}
-\usepackage{jheppub}
+
+\title[]{Sample title}
+\author[JM]{José M. Begines}
+\institute[UNIOVI]
+{
+	\inst{1}
+	Department of Physics \\
+	University of Oviedo
+}
+\date[Event]{Event title,2025}
+\subject{SUBJECT}
 
 \begin{document}
-Hello World, this is an equation:
-\begin{equation}
-	S = \int \text{d}^nx ~ \mathcal{L}\left(x,\dot{x}\right)
-\end{equation}
+	\begin{frame}
+		\titlepage
+	\end{frame}
 
-This is a new paragraph. \cite{Begines:2026mlv}
+	\section*{Outline}
+		\begin{frame}
+			\tableofcontents
+		\end{frame}
 
-\bibliography{etc/Refs}
+	\section{Example Section}	
+		\begin{frame}
+			\frametitle{Sample frame title}
+			This is some text in the first frame. This is some text in the first frame. This is some text in the first frame \cite{Begines:2026mlv}.
+		\end{frame}
+
+\appendix
+	\begin{frame}
+		\frametitle{References}
+		\bibliography{etc/Refs}
+	\end{frame}
 
 \end{document}

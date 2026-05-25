@@ -1,4 +1,6 @@
-%% Preamble
+%%%%%%%%%%%%%%
+%% Preamble %%
+%%%%%%%%%%%%%%
 
 \makeatletter
 	\def\input@path{{etc/}}
@@ -18,15 +20,54 @@
 \setsansfont{TeX Gyre Heros}
 \setmonofont{TeX Gyre Cursor}
 
+\usefonttheme[onlylarge]{structuresmallcapsserif}
+\usefonttheme[onlysmall]{structurebold}
+\usefonttheme[onlymath]{serif}
+
 %% Layout
-\KOMAoption{DIV}{13}
+
+% Presentation Style
+
+\mode<presentation>
+{
+  \usetheme{Frankfurt}
+  \usecolortheme{crane}
+} 
+
+% Layout Fonts
+
+\setbeamerfont{title}{family = \rmfamily}
+\setbeamercolor{title}{fg = red!80!black, bg = red!20!white}
+
+\setbeamerfont{section in toc}{family=\rmfamily}
+\setbeamerfont{subsection in toc}{family=\rmfamily}
+
+\setbeamerfont{frametitle}{family=\rmfamily}
+
+\setbeamertemplate{navigation symbols}{}
+
+\setbeamertemplate{footline}
+{
+  \hfill%
+  \usebeamercolor[fg]{page number in head/foot}%
+  \usebeamerfont{page number in head/foot}%
+  \setbeamertemplate{page number in head/foot}[framenumber]%
+  \usebeamertemplate*{page number in head/foot}\kern1em\vskip3pt%
+}
+
+\pgfdeclareimage[height = 0.7cm]{university-logo}{etc/images/university-logo.png}
+\logo{\pgfuseimage{university-logo}\hspace{0.2cm}}
+
 
 %% Figures and Graphics
 
 \usepackage{graphicx}
-\graphicspath{{etc/Images/}}
+\graphicspath{{etc/images/}}
 
 %% Bibliography
+
+\newif\ifnatbibsort\natbibsorttrue
+\ifnatbibsort\RequirePackage[numbers,sort&compress]{natbib}\else\RequirePackage[numbers,compress]{natbib}\fi
 
 \bibliographystyle{etc/JHEP}
 
