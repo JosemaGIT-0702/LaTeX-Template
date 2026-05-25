@@ -3,6 +3,8 @@
 .DS_Store
 
 # ## Core latex/pdflatex auxiliary files:
+*.nav
+*.snm
 *.aux
 *.lof
 *.log
